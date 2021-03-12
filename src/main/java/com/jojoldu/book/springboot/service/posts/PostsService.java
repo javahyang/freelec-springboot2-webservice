@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor // 생성자 역할. final이 선언된 모든 필드를 인자값으로 하는 생성자
 @Service
-public class PostsService {
+public class PostsService { //실행순서를 담당하는 Service
 
     private final PostsRepository postsRepository;
 
