@@ -1,11 +1,13 @@
 package com.jojoldu.book.springboot.config.auth.dto;
 
 import com.jojoldu.book.springboot.domain.user.User;
+import lombok.Getter;
 
 import java.io.Serializable;
 
 // 직렬화 기능을 가진 세션Dto를 추가해 User 클래스에 직렬화 코드 넣었을 때 발생할 확률이 높은 성능이슈, 부수효과 차단
 // 인증된 사용자 정보만 필요
+@Getter
 public class SessionUser implements Serializable {
     private String name;
     private String email;
