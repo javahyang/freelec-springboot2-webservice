@@ -1,5 +1,5 @@
-ABSDIR=$(dirname $ABSDIR) # 현재 파일이 속해있는 경로
-
+ABSPATH=$(readlink -f $0)
+ABSDIR=$(dirname $ABSPATH) # 현재 파일이 속해있는 경로
 source ${ABSDIR}/profile.sh # import 역할
 
 IDLE_PORT=$(find_idle_port)
