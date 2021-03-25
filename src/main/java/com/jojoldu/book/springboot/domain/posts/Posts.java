@@ -36,6 +36,7 @@ public class Posts extends BaseTimeEntity {
         this.author = author;
     }
 
+    // 기본 jpa 에는 update 없음. 직접 만들어야함
     public void update(String title, String content) {
         this.title = title;
         this.content = content;
