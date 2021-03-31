@@ -30,11 +30,11 @@ jobs:
       shell: bash
 
     - name: Before deploy
-      run: mkdir -p before-deploy && cp scripts/*.sh before-deploy/ && cp appspec.yml before-deploy/ && cp build/libs/*.jar before-deploy/ && cd before-deploy
+      run: mkdir -p before-deploy && cp scripts/*.sh before-deploy/ && cp appspec.yml before-deploy/ && cp build/libs/*.jar before-deploy/
       shell: bash
       
     - name: Make zip file
-      run: zip -r $GITHUB_SHA.zip *
+      run: zip -r $GITHUB_SHA.zip ./before-deploy/*
       shell: bash
 
     - name: Configure AWS credentials
