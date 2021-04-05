@@ -6,6 +6,11 @@ name: Java CI with Gradle
 on:
   workflow_dispatch:
 
+env:
+  ACTIVE: dev
+  PROJECT_NAME: freelec-springboot-webservice
+  S3_BUCKET_NAME: freelec-springboot-build-dev.jihyang1
+  
 jobs:
   build:
 
