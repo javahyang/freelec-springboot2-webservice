@@ -30,3 +30,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Before jar deploy
+      run: mkdir -p before-deploy/build && cp build/libs/*.jar before-deploy/build/ && cp appspec.yml before-deploy/
+      shell: bash
