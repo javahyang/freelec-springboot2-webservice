@@ -34,3 +34,7 @@ jobs:
     - name: Before jar deploy
       run: mkdir -p before-deploy/build && cp build/libs/*.jar before-deploy/build/ && cp appspec.yml before-deploy/
       shell: bash
+
+    - name: Before sh deploy
+      run: mkdir -p before-deploy/scripts && cp scripts/*.sh before-deploy/scripts/
+      shell: bash
