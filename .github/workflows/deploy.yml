@@ -38,3 +38,7 @@ jobs:
     - name: Before sh deploy
       run: mkdir -p before-deploy/scripts && cp scripts/*.sh before-deploy/scripts/
       shell: bash
+
+    - name: Make zip file
+      run: zip -r $GITHUB_SHA.zip ./before-deploy/*
+      shell: bash
