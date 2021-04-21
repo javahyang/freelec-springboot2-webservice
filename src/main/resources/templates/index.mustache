@@ -12,6 +12,7 @@
                 {{^userName}} <!-- userName 이 없으면 로그인 버튼 노출 -->
                         <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a> <!-- 스프링 시큐리티의 디폴트 구글로그인 URL -->
                         <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a> <!-- application-oauth.properties 에 등록한 redirect-uri 값 -->
+                        <a href="/oauth2/authorization/kakao" class="btn btn-secondary active" role="button">Kakao Login</a>
                 {{/userName}}
             </div>
         </div>
